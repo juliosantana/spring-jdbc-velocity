@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.juliosantana</groupId>
 	<artifactId>spring-data-jdbc-velocity</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>spring-data-jdbc-velocity</name>
 	<description>Make it easy to implement native dynamic queries using Spring Data JDBC and Velocity String Template.</description>
 	<properties>
@@ -14,6 +14,13 @@
 		<junit.version>5.10.1</junit.version>
 		<mockito.version>5.2.0</mockito.version>
 	</properties>
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub juliosantana Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/juliosantana/spring-jdbc-velocity</url>
+		</repository>
+	</distributionManagement>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
