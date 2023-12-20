@@ -1,4 +1,4 @@
-package br.com.spring.data.velocity;
+package com.github.juliosantana.data.velocity;
 
 import java.io.StringWriter;
 import java.util.Properties;

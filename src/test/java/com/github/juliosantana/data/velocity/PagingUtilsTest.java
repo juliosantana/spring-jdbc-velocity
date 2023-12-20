@@ -1,4 +1,4 @@
-package br.com.spring.data.velocity;
+package com.github.juliosantana.data.velocity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -8,6 +8,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+
+import com.github.juliosantana.data.velocity.PagingUtils;
 
 @ExtendWith(MockitoExtension.class)
 class PagingUtilsTest {
