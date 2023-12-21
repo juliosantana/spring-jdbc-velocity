@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.juliosantana</groupId>
 	<artifactId>spring-data-jdbc-velocity</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>spring-data-jdbc-velocity</name>
 	<description>Make it easy to implement native dynamic queries using Spring Data JDBC and Velocity String Template.</description>
 	<properties>
