@@ -7,6 +7,7 @@
 	<version>1.0.2</version>
 	<name>spring-jdbc-velocity</name>
 	<description>Make it easy to implement native dynamic queries using Spring Data JDBC and Velocity String Template.</description>
+	<url>https://github.com/juliosantana/spring-jdbc-velocity</url>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
