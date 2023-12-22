@@ -44,7 +44,7 @@ jobs:
       run: |
         mvn javadoc:jar \
           source:jar \
-          -s $GITHUB_WORKSPACE/settings.xml \
+          -s settings.xml \
           -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} \
           deploy
       env:
