@@ -3,10 +3,10 @@
           xmlns="http://maven.apache.org/SETTINGS/1.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <servers>
-        <server>
-            <id>ossrh</id>
-            <username>${env.MAVEN_USERNAME}</username>
-            <password>${env.MAVEN_PASSWORD}</password>
-        </server>
+       <server>
+          <id>${server}</id>
+          <username>mktSkDe5</username>
+          <password>yy+OCVUrQUoYxOR+zyjS4iKlX6dKg0P5IqE0msL0tqlw</password>
+       </server>
     </servers>
 </settings>
