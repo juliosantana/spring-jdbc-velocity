@@ -4,7 +4,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <servers>
        <server>
-          <id>${server}</id>
+          <id>ossrh</id>
           <username>mktSkDe5</username>
           <password>yy+OCVUrQUoYxOR+zyjS4iKlX6dKg0P5IqE0msL0tqlw</password>
        </server>
