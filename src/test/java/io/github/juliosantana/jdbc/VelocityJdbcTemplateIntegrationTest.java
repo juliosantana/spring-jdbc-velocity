@@ -1,4 +1,4 @@
-package com.github.juliosantana.data.velocity;
+package io.github.juliosantana.jdbc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -17,8 +17,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.SingleColumnRowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
-import com.github.juliosantana.data.velocity.VelocityJdbcTemplate;
-import com.github.juliosantana.data.velocity.VelocityJdbcTemplateImpl;
+import io.github.juliosantana.jdbc.VelocityJdbcTemplate;
+import io.github.juliosantana.jdbc.VelocityJdbcTemplateImpl;
 
 @ExtendWith(MockitoExtension.class)
 class VelocityJdbcTemplateIntegrationTest {

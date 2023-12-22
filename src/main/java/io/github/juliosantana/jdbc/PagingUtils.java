@@ -1,4 +1,4 @@
-package com.github.juliosantana.data.velocity;
+package io.github.juliosantana.jdbc;
 
 import java.util.stream.Collectors;
 

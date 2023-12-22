@@ -1,4 +1,4 @@
-package com.github.juliosantana.data.velocity;
+package io.github.juliosantana.velocity;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
-import com.github.juliosantana.data.velocity.QueryParser;
+import io.github.juliosantana.velocity.QueryParser;
 
 @ExtendWith(MockitoExtension.class)
 class QueryParserTest {

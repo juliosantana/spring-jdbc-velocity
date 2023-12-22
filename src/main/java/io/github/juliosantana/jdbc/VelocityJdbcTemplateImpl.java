@@ -1,4 +1,4 @@
-package com.github.juliosantana.data.velocity;
+package io.github.juliosantana.jdbc;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +14,8 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.SingleColumnRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+
+import io.github.juliosantana.velocity.QueryParser;
 
 public class VelocityJdbcTemplateImpl implements VelocityJdbcTemplate  {
 	

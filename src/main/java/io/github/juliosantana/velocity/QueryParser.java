@@ -1,4 +1,4 @@
-package com.github.juliosantana.data.velocity;
+package io.github.juliosantana.velocity;
 
 import java.io.StringWriter;
 import java.util.Properties;
