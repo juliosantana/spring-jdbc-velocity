@@ -28,8 +28,9 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
+        cache: 'maven'
 
     - name: Import GPG Key
       uses: crazy-max/ghaction-import-gpg@v5.0.0
