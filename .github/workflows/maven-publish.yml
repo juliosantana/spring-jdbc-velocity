@@ -30,12 +30,9 @@ jobs:
 
     - name: Publish Maven
       run: |
-        mvn -B -U \
-          release:prepare \
-          release:perform \
-          javadoc:jar \
+        mvn javadoc:jar \
           source:jar \
-          -s settings.xml \
+          -s $GITHUB_WORKSPACE/settings.xml \
           -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} \
           deploy
       env:
