@@ -7,8 +7,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
-import io.github.juliosantana.velocity.QueryParser;
-
 @ExtendWith(MockitoExtension.class)
 class QueryParserTest {
 

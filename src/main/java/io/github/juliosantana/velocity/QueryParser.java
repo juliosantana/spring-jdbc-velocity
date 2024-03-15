@@ -22,12 +22,13 @@ public class QueryParser {
 				"org.apache.velocity.runtime.resource.loader.StringResourceLoader");
 		velocityEngine.init(properties);
 		velocityEngine.init();
-
+		
 	}
 
 	public String parser(String query, SqlParameterSource sqlParameterSource) {
-		StringResourceLoader.getRepository().putStringResource(QUERY_STORE, query);
-
+		String storeKey = QUERY_STORE + query.hashCode();
+		StringResourceLoader.getRepository().putStringResource(storeKey, query);
+		
 		VelocityContext context = new VelocityContext();
 
 		if (sqlParameterSource == null) {
@@ -39,7 +40,10 @@ public class QueryParser {
 		}
 
 		StringWriter writer = new StringWriter();
-		velocityEngine.mergeTemplate(QUERY_STORE, "UTF-8", context, writer);
+		velocityEngine.mergeTemplate(storeKey, "UTF-8", context, writer);
+		
+		StringResourceLoader.getRepository().removeStringResource(storeKey);
+		
 		return writer.toString();
 	}
 
