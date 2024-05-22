@@ -17,8 +17,10 @@ class PagingUtils {
 		String sort = pageable.getSort().get()
 				.map(o -> StringUtils.join(o.getProperty(), StringUtils.SPACE, o.getDirection().name()))
 				.collect(Collectors.joining(COMMA_SEPARADOR));
-
-		query.append(String.format(ORDER, sort));
+                
+		if(StringUtils.isNotBlank(sort){
+		   query.append(String.format(ORDER, sort));
+		}
 	}
 
 	static void addPaging(final StringBuilder query, Pageable pageable) {
