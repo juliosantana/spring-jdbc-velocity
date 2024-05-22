@@ -18,7 +18,7 @@ class PagingUtils {
 				.map(o -> StringUtils.join(o.getProperty(), StringUtils.SPACE, o.getDirection().name()))
 				.collect(Collectors.joining(COMMA_SEPARADOR));
                 
-		if(StringUtils.isNotBlank(sort){
+		if(StringUtils.isNotBlank(sort)){
 		   query.append(String.format(ORDER, sort));
 		}
 	}
