@@ -49,6 +49,30 @@ class PagingUtilsTest {
         // Verifica se o resultado é o esperado
         assertEquals("SELECT * FROM pessoa ORDER BY nome ASC, idade ASC OFFSET 5 ROWS FETCH NEXT 5 ROWS ONLY", query.toString());
     }
+    
+    @Test
+    void testAddOrderByAndPagingWithoutSort() {
+        // Cria um objeto Pageable com ordenação por nome e idade e a segunda página de tamanho 5
+        Pageable pageable = PageRequest.of(1, 5);
+        // Cria um objeto StringBuilder com uma consulta SQL
+        StringBuilder query = new StringBuilder("SELECT * FROM pessoa");
+        // Chama o método addOrderByAndPaging da classe PagingUtils
+        PagingUtils.addOrderByAndPaging(query, pageable);
+        // Verifica se o resultado é o esperado
+        assertEquals("SELECT * FROM pessoa OFFSET 5 ROWS FETCH NEXT 5 ROWS ONLY", query.toString());
+    }
+    
+    @Test
+    void testAddOrderByAndPagingWithoutSortWithPage() {
+        // Cria um objeto Pageable com ordenação por nome e idade e a segunda página de tamanho 5
+        Pageable pageable = Pageable.ofSize(10);
+        // Cria um objeto StringBuilder com uma consulta SQL
+        StringBuilder query = new StringBuilder("SELECT * FROM pessoa");
+        // Chama o método addOrderByAndPaging da classe PagingUtils
+        PagingUtils.addOrderByAndPaging(query, pageable);
+        // Verifica se o resultado é o esperado
+        assertEquals("SELECT * FROM pessoa OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY", query.toString());
+    }
 
     @Test
     void testCreateDefaultCount() {
