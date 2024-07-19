@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -43,7 +44,11 @@ public class VelocityJdbcTemplateImpl implements VelocityJdbcTemplate  {
 	@Override
 	public <T> Optional<T> queryForObject(String sql, SqlParameterSource paramSource, RowMapper<T> rowMapper)
 			throws DataAccessException {
-		return Optional.ofNullable(namedJdbcTemplate.queryForObject(queryParser.parser(sql, paramSource), paramSource, rowMapper));
+		try {
+			return Optional.ofNullable(namedJdbcTemplate.queryForObject(queryParser.parser(sql, paramSource), paramSource, rowMapper));
+		} catch(EmptyResultDataAccessException e) {
+			return Optional.empty();
+		}
 	}
 
 	@Override
